@@ -9,7 +9,7 @@ jobs:
     runs-on: ubuntu-latest
     steps:
     - name: Close the issue in parent repo
-      if: github.repository.name == 'uainc/tfc-guid-example'
+      if: github.repository.name == 'uainc/tfc-guide-example'
       uses: superbrothers/close-pull-request@v3
       with:
         repo-token: ${{ secrets.GITHUB_TOKEN }}

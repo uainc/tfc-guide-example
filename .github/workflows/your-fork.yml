@@ -8,7 +8,9 @@ jobs:
   close:
     runs-on: ubuntu-latest
     steps:
-    - uses: superbrothers/close-pull-request@v3
+    - name: Close the issue in parent repo
+      if: github.repository.name == 'uainc/tfc-guid-example-new'
+      uses: superbrothers/close-pull-request@v3
       with:
         repo-token: ${{ secrets.GITHUB_TOKEN }}
         # Optional. Post a issue comment just before closing a pull request.
